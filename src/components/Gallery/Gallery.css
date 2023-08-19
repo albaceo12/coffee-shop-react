@@ -1,0 +1,67 @@
+.gallery__grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+.gallery__item {
+  position: relative;
+}
+.gallery__item::before {
+  content: "";
+  position: absolute;
+  inset: 0.5rem;
+  background-color: var(--first-color);
+  border-radius: var(--radius);
+  transform: scaleY(0);
+  opacity: 0;
+  transition: 0.4s var(--transition);
+}
+.gallery__img,
+.gallery__title {
+  border-radius: var(--radius);
+}
+.gallery__icon,
+.gallery__title {
+  position: absolute;
+  font-size: var(--largest-font-size);
+  opacity: 0;
+}
+.gallery__icon {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--title-color);
+  color: var(--first-color);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-top: 3rem;
+  transition: 0.3s var(--transition);
+  transition-delay: 0.3s;
+}
+.gallery__title {
+  bottom: 0;
+  inset-inline: 1.75rem;
+  background-color: var(--container-color);
+  text-align: center;
+  padding-block: 1.25rem;
+  transition: 0.5s var(--transition);
+}
+
+/*===============
+   * hover effect
+  ===============*/
+.gallery__item:hover::before {
+  opacity: 0.7;
+  transform: scaleY(1);
+}
+.gallery__item:hover .gallery__icon,
+.gallery__item:hover .gallery__title {
+  opacity: 1;
+}
+.gallery__item:hover .gallery__icon {
+  margin-top: 0rem;
+}
+.gallery__item:hover .gallery__title {
+  bottom: 1.75rem;
+}

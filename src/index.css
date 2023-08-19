@@ -1,0 +1,148 @@
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  .features__grid,
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__grid {
+    row-gap: 3rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  :root {
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.375rem;
+    --h3-font-size: 1.25rem;
+    --largest-font-size: 1.25rem;
+    --larger-font-size: 1.125rem;
+    --large-font-size: 1rem;
+    --normal-font-size: 0.9375rem;
+  }
+  .container {
+    max-width: 720px;
+  }
+  .btn {
+    padding: 0.75rem 1.25rem;
+  }
+  .nav {
+    height: var(--header-height);
+  }
+  .nav__logo-img,
+  .footer__logo-img {
+    width: 140px;
+  }
+  .nav__menu {
+    position: absolute;
+    top: 100%;
+    inset-inline: 0.75rem;
+    background-color: var(--title-color);
+    max-height: 0;
+    overflow-y: scroll;
+    transition: 0.3s var(--transition);
+  }
+  .show-menu {
+    max-height: 220px;
+  }
+  .nav__list {
+    flex-direction: column;
+  }
+  .nav__item {
+    padding: 0.5rem 1.25rem;
+  }
+  .nav__link {
+    color: var(--bg-color);
+  }
+  .nav__toggle {
+    display: inherit;
+  }
+  .home__btns {
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+  .about__grid,
+  .menu__grid,
+  .choose__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about__img-wrapper-reverse {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .choose__grid {
+    row-gap: 3rem;
+  }
+  .stats__grid,
+  .gallery__grid,
+  .team__grid,
+  .reservation__form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stats__grid {
+    row-gap: 5rem;
+  }
+  .offer__title {
+    margin-bottom: 1rem;
+  }
+  .testimonial__icon {
+    bottom: -1.4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  .offer__item {
+    grid-template-columns: 1fr;
+  }
+  .offer__img-wrapper {
+    margin-right: 0;
+  }
+  .offer__img {
+    vertical-align: middle;
+  }
+  .testimonial__icon {
+    bottom: -1.25rem;
+  }
+  .footer__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 576px) {
+  .about__img-wrapper {
+    padding-left: 1rem;
+  }
+  .about__img-wrapper::before {
+    bottom: -0.625rem;
+  }
+  .features__grid,
+  .menu__item,
+  .stats__grid,
+  .gallery__grid,
+  .team__grid,
+  .reservation__form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .menu__img-wrapper {
+    width: 60px;
+    height: 60px;
+    padding: 2px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .reservation {
+    padding: 1.5rem 1.25rem;
+  }
+  .testimonial__qoute {
+    padding: 1.5rem 1.25rem 2rem;
+  }
+  .testimonial__icon {
+    bottom: -1.2rem;
+  }
+  .testimonial__img-wrapper {
+    width: 70px;
+    height: 70px;
+    /* margin-inline: 1rem; */
+  }
+}
